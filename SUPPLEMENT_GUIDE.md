@@ -1,0 +1,28 @@
+# Guide to the Online Supplement
+
+This guide provides a navigation layer for the Online Supplement. It does not replace or modify the Supplement.
+
+[Open the full Online Supplement](./Online_Supplement.pdf) · [Return to the repository overview](./README.md)
+
+The PDF contains 383 pages. Page references below are verified **starting pages** in that file, not claimed page ranges. Printed page numbers match PDF page positions. Appendix A is numbered separately from Tables S1–S10 and Figures S1/S3.
+
+| Question | Where to look | What it contains |
+| --- | --- | --- |
+| What data and predictors are used? | **Appendix A. Supporting Main-Analysis Displays**, Appendix Table A1 (p. 2); **S.A Reproducible features and training**, Table S1 (p. 6) | Cohort construction, temporal roles, eligibility, and the 19 origination predictors with cleaning and preprocessing definitions. |
+| How were Logistic Regression, Random Forest, and XGBoost selected? | **S.A Reproducible features and training**, Tables S1–S2 (pp. 6 and 9) | Prespecified grids, selected settings, and complete forward-fold temporal development results. |
+| How was historical isotonic calibration estimated? | **S.A Reproducible features and training**, Table S1 (p. 6) | Isotonic mappings fitted to pooled training-period 2016–2019 forward out-of-fold predictions and applied unchanged later. |
+| What happened to probability calibration in 2020 and 2023? | **S.B Complete prediction and calibration evidence**, Table S3 (p. 58), Figure S1 (p. 65) | Raw-versus-calibrated Brier score, log loss, mean probability, calibration diagnostics, and reliability evidence for both periods. |
+| How is the illustrative 5:1 FN:FP decision rule defined? | **Appendix A. Supporting Main-Analysis Displays**, Appendix Figure A2 (p. 4); **S.C Decision sensitivities**, Table S4 (p. 66) | Calibrated probability threshold 1/6, risky/non-risky counts, FP + 5FN loss, and the matching all-non-risky benchmark. |
+| What happens under alternative loss ratios? | **S.C Decision sensitivities**, Table S4 (p. 66); **S.E Robustness definitions and full evidence**, Figure S3 (p. 382) | Common calibrated rules for illustrative FN:FP ratios 1:1, 2:1, 5:1, and 10:1, with ratio-specific benchmarks. |
+| What happens using raw probabilities? | **S.C Decision sensitivities**, Table S5, block B (table begins p. 68); **S.E Robustness definitions and full evidence**, Figure S3 (p. 382) | Raw-probability common-threshold sensitivity, kept separate from the primary calibrated rule. |
+| What happens using validation-optimal thresholds? | **S.C Decision sensitivities**, Table S5, block C (table begins p. 68); **S.E Robustness definitions and full evidence**, Figure S3 (p. 382) | Frozen 2020 validation-optimal thresholds applied unchanged to 2023 as a secondary sensitivity. |
+| How often do Logistic and XGBoost disagree? | **S.D Complete RQ3 profiles and adjusted associations**, Table S6, Classification-cell context (p. 72) | Four joint classification cells and the two disagreement directions under the calibrated common 5:1 threshold. |
+| Which loans fall into the two disagreement directions? | **S.D Complete RQ3 profiles and adjusted associations**, Tables S6–S7 (pp. 72 and 74) | Direction 1: Logistic non-risky / XGBoost risky; direction 0: Logistic risky / XGBoost non-risky, with observed characteristic profiles. |
+| Which borrower and loan characteristics differ across directions? | **S.D Complete RQ3 profiles and adjusted associations**, Tables S6–S7 (pp. 72 and 74) | Numeric distributions and signed standardized mean differences; categorical profiles and percentage-point comparisons. |
+| What does the adjusted Firth directional model show? | **S.D Complete RQ3 profiles and adjusted associations**, Table S8 (p. 141); **S.F Numerical estimation and provenance** (p. 383) | Adjusted associations with disagreement direction, reference categories, scaling, approximate Wald intervals, and suppressed sparse terms. |
+| Why was the Firth fallback used? | **S.D Complete RQ3 profiles and adjusted associations**, Table S8 (p. 141); **S.F Numerical estimation and provenance** (p. 383) | The ordinary-MLE estimability failure and identical-design Firth fallback, with the approved stopping rule and saved convergence diagnostics. |
+| What does each robustness specification R1–R7 change? | **Appendix A. Supporting Main-Analysis Displays**, Appendix Table A2 (p. 4); **S.E Robustness definitions and full evidence**, Tables S9–S10 (pp. 144 and 149), Figure S3 (p. 382) | Outcome, observation, administrative-exit, timing, and temporal-design sensitivities, cohort flows, and full model evidence. |
+| Why are R3 and R7 especially important? | **Appendix A. Supporting Main-Analysis Displays**, Appendix Table A2 (p. 4); **S.E Robustness definitions and full evidence**, Tables S9–S10 (pp. 144 and 149), Figure S3 (p. 382) | R3 changes the remaining-on-book population and estimand; R7 adds First Payment Date timing-proxy features beyond development support. |
+| Where are provenance / reproducibility checks documented? | **S.A Reproducible features and training**, Tables S1–S2 (pp. 6 and 9); **S.F Numerical estimation and provenance** and **S.G Step 12 source-reproduction implementation correction** (both p. 383) | Reproducible feature/training specifications, numerical estimation safeguards, and the documented separation of annual source reproduction from role eligibility. |
+
+Figures actually present are **Appendix Figures A1–A2**, **Figure S1**, and **Figure S3**. The Supplement explicitly records that optional Figure S2 was not generated; it is not a reading target.
