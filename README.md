@@ -4,7 +4,7 @@
 
 **From Prediction to Risk Classification: Temporal Transport and Model-Induced Reclassification in Mortgage Assessment**
 
-This repository provides the Online Supplement accompanying the paper.
+This repository provides the Online Supplement accompanying the paper. The current public Supplement is v1.1.
 
 The study follows mortgage-risk assessment through four linked stages:
 
@@ -56,11 +56,11 @@ The source Freddie Mac data are not redistributed in this repository. Readers sh
 
 ## Version
 
-Version: UChicago MACSS writing-sample supplement  
-Date: 6 October 2026
+Version: UChicago MACSS writing-sample supplement v1.1  
+Date: 19 October 2026
 
 SHA-256 of `Online_Supplement.pdf`:
 
 ```text
-935c6223c355edb7411a5f135612c6f41da3a8a387907f5f485b5261d1395567
+6adb0c4c624a54d01d3274c4a7010d16ba19cffab76fd7de034a512fc588a936
 ```
